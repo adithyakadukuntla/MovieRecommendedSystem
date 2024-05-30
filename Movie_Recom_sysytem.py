@@ -12,9 +12,9 @@ import difflib
 import warnings
 warnings.filterwarnings('ignore')
 
-df = pd.read_csv('C:/Users/Lenovo/OneDrive/Desktop/today/Machine_Learning/5.Movie_Recommended/movies_Recom.csv')
-movie_similarity = pickle.load(open('C:/Users/Lenovo/OneDrive/Desktop/today/Machine_Learning/5.Movie_Recommended/movie_similarity.sav','rb'))
-list_of_movies = pickle.load(open('C:/Users/Lenovo/OneDrive/Desktop/today/Machine_Learning/5.Movie_Recommended/all_movies.sav','rb'))
+df = pd.read_csv('movies_Recom.csv')
+movie_similarity = pickle.load(open('movie_similarity.sav','rb'))
+list_of_movies = pickle.load(open('all_movies.sav','rb'))
 
 movie_name = input(' Enter your favourite movie name : ')
 
