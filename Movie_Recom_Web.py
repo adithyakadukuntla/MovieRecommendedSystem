@@ -6,11 +6,21 @@ Created on Thu May 30 15:13:43 2024
 """
 
 import pickle
+import requests
 import pandas as pd
 import streamlit as st
 import difflib
 import warnings
 warnings.filterwarnings('ignore')
+#"https://github.com/adithyakadukuntla/MovieRecommendedSystem/releases/tag/untagged-9713449c24611040cf77"
+file_url = "https://github.com/adithyakadukuntla/MovieRecommendedSystem/releases/download/untagged-9713449c24611040cf77/movie_similarity.sav"
+
+# Download the file from GitHub
+response = requests.get(file_url)
+
+# Save the file locally
+with open('movie_similarity.sav', 'wb') as f:
+    f.write(response.content)
 
 df = pd.read_csv('movies_Recom.csv')
 movie_similarity = pickle.load(open('movie_similarity.sav','rb'))
